@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TastyBites - Food Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="logo">TastyBites 🍔</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Delicious Food<br>Delivered To You</h1>
+
+            <p>
+                Fresh, delicious and made with love.
+                Order your favourite food today.
+            </p>
+
+            <a href="#menu" class="order-button">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+
+    <section id="menu">
+
+        <h2>Our Menu</h2>
+
+        <div class="food-container">
+
+            <!-- FOOD 1 -->
+
+            <div class="food-card">
+
+                <img src="images/pizza.jpg" alt="Pizza">
+
+                <h3>Cheese Pizza</h3>
+
+                <p>Loaded with delicious cheese.</p>
+
+                <h4>₹249</h4>
+
+                <button onclick="addToCart('Cheese Pizza',249)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- FOOD 2 -->
+
+            <div class="food-card">
+
+                <img src="images/burger.jpg" alt="Burger">
+
+                <h3>Classic Burger</h3>
+
+                <p>Juicy burger with fresh vegetables.</p>
+
+                <h4>₹149</h4>
+
+                <button onclick="addToCart('Classic Burger',149)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- FOOD 3 -->
+
+            <div class="food-card">
+
+                <img src="images/pasta.jpg" alt="Pasta">
+
+                <h3>Creamy Pasta</h3>
+
+                <p>Rich and creamy Italian pasta.</p>
+
+                <h4>₹199</h4>
+
+                <button onclick="addToCart('Creamy Pasta',199)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <!-- FOOD 4 -->
+
+            <div class="food-card">
+
+                <img src="images/biryani.jpg" alt="Biryani">
+
+                <h3>Chicken Biryani</h3>
+
+                <p>Fragrant rice with delicious chicken.</p>
+
+                <h4>₹229</h4>
+
+                <button onclick="addToCart('Chicken Biryani',229)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            TastyBites brings delicious food directly to your doorstep.
+            We believe great food should be fresh, affordable and easy to order.
+        </p>
+
+    </section>
+
+
+    <!-- CART -->
+
+    <div id="cart-modal" class="modal">
+
+        <div class="cart-box">
+
+            <span class="close" onclick="closeCart()">×</span>
+
+            <h2>Your Cart</h2>
+
+            <div id="cart-items"></div>
+
+            <h3>
+                Total: ₹<span id="cart-total">0</span>
+            </h3>
+
+            <button onclick="checkout()">
+                Place Order
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
