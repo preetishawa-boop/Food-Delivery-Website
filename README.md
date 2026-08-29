@@ -1,2 +1,11 @@
-# Food-Delivery-Website
-A temporary online food ordering and delivery website
+food-delivery-website/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+└── images/
+    ├── pizza.jpg
+    ├── burger.jpg
+    ├── pasta.jpg
+    └── biryani.jpg
